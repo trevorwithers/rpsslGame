@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">rpsslGame</string>
+    <string name="title">Rock Paper Scissors Lizard Spock</string>
+    <string name="playAgain">Play Again</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="vs">VS</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+    <string name="lizard">Lizard</string>
+    <string name="spock">Spock</string>
+    <string name="normalGame">Normal Game</string>
+    <string name="extendedGame">Extended Game</string>
+    <string name="numWins">Number of Wins: </string>
+    <string name="numLosses">Number of Losses: </string>
+    <string name="enterUsername">Enter Username</string>
+    <string name="logOut">Log Out</string>
+    <string name="login">Login</string>
+    <string name="clearScores">Clear Scores</string>
+</resources>

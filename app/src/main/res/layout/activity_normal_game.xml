@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    tools:context=".NormalGame">
+
+    <TextView
+        android:id="@+id/normalNumWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numWins"
+        app:layout_constraintBottom_toTopOf="@+id/normalNumWinsBox"
+        app:layout_constraintEnd_toStartOf="@+id/normalMainMenuBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
+
+    <Button
+        android:id="@+id/normalMainMenuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu"
+        app:layout_constraintBottom_toTopOf="@+id/paperBtn"
+        app:layout_constraintEnd_toStartOf="@+id/normalNumLosses"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normalNumWins"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/normalNumLosses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numLosses"
+        app:layout_constraintBottom_toTopOf="@+id/normalNumLossesBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normalMainMenuBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
+
+    <TextView
+        android:id="@+id/normalNumWinsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
+        android:minEms="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/paperBtn"
+        app:layout_constraintEnd_toStartOf="@+id/normalNumLossesBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalMainMenuBtn" />
+
+    <TextView
+        android:id="@+id/normalNumLossesBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:background="#FFFFFF"
+        android:minEms="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/paperBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/normalNumWinsBox"
+        app:layout_constraintTop_toBottomOf="@+id/normalMainMenuBtn" />
+
+    <ImageButton
+    android:id="@+id/rockBtn"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:contentDescription="@string/rock"
+    android:scaleType="fitCenter"
+    android:elevation="4dp"
+    android:stateListAnimator="@animator/raise_on_press"
+    android:background="@drawable/bubble_button"
+    android:padding="10dp"
+    app:layout_constraintBottom_toTopOf="@+id/userChoice"
+    app:layout_constraintEnd_toStartOf="@+id/paperBtn"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/normalMainMenuBtn"
+    app:srcCompat="@drawable/rockicon" />
+
+<ImageButton
+    android:id="@+id/paperBtn"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:contentDescription="@string/paper"
+    android:scaleType="fitCenter"
+    android:elevation="4dp"
+    android:stateListAnimator="@animator/raise_on_press"
+    android:background="@drawable/bubble_button"
+    android:padding="10dp"
+    app:layout_constraintBottom_toTopOf="@+id/userChoice"
+    app:layout_constraintEnd_toStartOf="@+id/scissorsBtn"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/rockBtn"
+    app:layout_constraintTop_toBottomOf="@+id/normalMainMenuBtn"
+    app:srcCompat="@drawable/papericon" />
+
+<ImageButton
+    android:id="@+id/scissorsBtn"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:contentDescription="@string/scissors"
+    android:scaleType="fitCenter"
+    android:elevation="4dp"
+    android:stateListAnimator="@animator/raise_on_press"
+    android:background="@drawable/bubble_button"
+    android:padding="10dp"
+    app:layout_constraintBottom_toTopOf="@+id/userChoice"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/paperBtn"
+    app:layout_constraintTop_toBottomOf="@+id/normalMainMenuBtn"
+    app:srcCompat="@drawable/scissorsicon" />
+
+    <ImageView
+        android:id="@+id/userChoice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/normalGame"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/normalVs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paperBtn"
+        app:srcCompat="@drawable/normalgame" />
+
+    <TextView
+        android:id="@+id/normalVs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vs"
+        app:layout_constraintBottom_toTopOf="@+id/computerChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userChoice" />
+
+    <ImageView
+        android:id="@+id/computerChoice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/normalGame"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalVs"
+        app:srcCompat="@drawable/normalgame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

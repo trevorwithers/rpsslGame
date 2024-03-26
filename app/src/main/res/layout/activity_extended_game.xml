@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    tools:context=".ExtendedGame">
+
+    <TextView
+        android:id="@+id/extendedNumWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numWins"
+        app:layout_constraintBottom_toTopOf="@+id/extendedNumWinsBox"
+        app:layout_constraintEnd_toStartOf="@+id/extendedMainMenuBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704" />
+
+    <Button
+        android:id="@+id/extendedMainMenuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/main_menu"
+        app:layout_constraintBottom_toTopOf="@+id/extendedPaperBtn"
+        app:layout_constraintEnd_toStartOf="@+id/extendedNumLosses"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/extendedNumWins"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/extendedNumLosses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numLosses"
+        app:layout_constraintBottom_toTopOf="@+id/extendedNumLossesBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/extendedMainMenuBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <TextView
+        android:id="@+id/extendedNumWinsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="62dp"
+        android:background="#FFFFFF"
+        android:minEms="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/extendedPaperBtn"
+        app:layout_constraintEnd_toStartOf="@+id/extendedNumLossesBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extendedMainMenuBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/extendedNumLossesBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:background="#FFFFFF"
+        android:minEms="3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/extendedPaperBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/extendedNumWinsBox"
+        app:layout_constraintTop_toBottomOf="@+id/extendedMainMenuBtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/extendedRockBtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/rock"
+        android:scaleType="fitCenter"
+        android:elevation="4dp"
+        android:stateListAnimator="@animator/raise_on_press"
+        android:background="@drawable/bubble_button"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/extendedLizardBtn"
+        app:layout_constraintEnd_toStartOf="@+id/extendedPaperBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extendedNumWinsBox"
+        app:layout_constraintVertical_bias="0.891"
+        app:srcCompat="@drawable/rockicon" />
+
+    <ImageButton
+        android:id="@+id/extendedPaperBtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/paper"
+        android:scaleType="fitCenter"
+        android:elevation="4dp"
+        android:stateListAnimator="@animator/raise_on_press"
+        android:background="@drawable/bubble_button"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/extendedUserChoice"
+        app:layout_constraintEnd_toStartOf="@+id/extendedScissorsBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/extendedRockBtn"
+        app:layout_constraintTop_toBottomOf="@+id/extendedMainMenuBtn"
+        app:srcCompat="@drawable/papericon" />
+
+    <ImageButton
+        android:id="@+id/extendedScissorsBtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/scissors"
+        android:scaleType="fitCenter"
+        android:elevation="4dp"
+        android:stateListAnimator="@animator/raise_on_press"
+        android:background="@drawable/bubble_button"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/extendedSpockBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/extendedPaperBtn"
+        app:layout_constraintTop_toBottomOf="@+id/extendedNumLossesBox"
+        app:layout_constraintVertical_bias="0.891"
+        app:srcCompat="@drawable/scissorsicon" />
+
+    <ImageButton
+        android:id="@+id/extendedLizardBtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/lizard"
+        android:scaleType="fitCenter"
+        android:elevation="4dp"
+        android:stateListAnimator="@animator/raise_on_press"
+        android:background="@drawable/bubble_button"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/extendedUserChoice"
+        app:layout_constraintEnd_toStartOf="@+id/extendedSpockBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extendedPaperBtn"
+        app:srcCompat="@drawable/lizzardicon" />
+
+    <ImageButton
+        android:id="@+id/extendedSpockBtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:contentDescription="@string/spock"
+        android:scaleType="fitCenter"
+        android:elevation="4dp"
+        android:stateListAnimator="@animator/raise_on_press"
+        android:background="@drawable/bubble_button"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/extendedUserChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/extendedLizardBtn"
+        app:layout_constraintTop_toBottomOf="@+id/extendedPaperBtn"
+        app:srcCompat="@drawable/spockicon" />
+
+    <ImageView
+        android:id="@+id/extendedUserChoice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/extendedGame"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/extendedVstxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extendedPaperBtn"
+        app:srcCompat="@drawable/extendedgame" />
+
+
+    <TextView
+        android:id="@+id/extendedVstxt"
+        android:layout_width="27dp"
+        android:layout_height="20dp"
+        android:text="@string/vs"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/extendedComputerChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extendedUserChoice" />
+
+    <ImageView
+        android:id="@+id/extendedComputerChoice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/extendedGame"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extendedVstxt"
+        app:srcCompat="@drawable/extendedgame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
